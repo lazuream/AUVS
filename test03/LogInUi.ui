@@ -337,7 +337,7 @@ QpushButton:pressed{
 }</string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <widget class="QWidget" name="page_3">
                   <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -378,7 +378,7 @@ font: 16pt &quot;楷体&quot;;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_L_PassWord">
+                    <widget class="QLineEdit" name="lineEdit_L_Password">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -396,22 +396,6 @@ font: 16pt &quot;楷体&quot;;</string>
                      </property>
                      <property name="placeholderText">
                       <string>密码：</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_Empty">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>35</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="placeholderText">
-                      <string/>
                      </property>
                     </widget>
                    </item>
@@ -483,7 +467,7 @@ font: 16pt &quot;楷体&quot;;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_R_PassWord">
+                    <widget class="QLineEdit" name="lineEdit_R_Password">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -559,7 +543,7 @@ QpushButton:pressed{
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
             <property name="spacing">
              <number>3</number>
             </property>
@@ -631,19 +615,137 @@ QPushButton:pressed{
               </layout>
              </widget>
             </item>
+            <item>
+             <widget class="QStackedWidget" name="success_error_Type">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#successLogIn{
+}
+#successRegister{
+}
+#sizeWrong{
+	color: rgb(190, 0, 0);
+}
+#userNameWrong{
+	color: rgb(190, 0, 0);
+}
+#passwordWrong{
+	color: rgb(190, 0, 0);
+}
+#logInWrong{
+	color: rgb(190, 0, 0);
+}</string>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="emptyPage">
+               <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+              </widget>
+              <widget class="QWidget" name="page1">
+               <layout class="QGridLayout" name="gridLayout">
+                <item row="0" column="0" alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="successLogIn">
+                  <property name="styleSheet">
+                   <string notr="true">#userNameWrong_1{
+	color: rgb(255, 0, 0);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string> 登陆成功</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page2">
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="successRegister">
+                  <property name="styleSheet">
+                   <string notr="true">#userNameWrong_1{
+	color: rgb(255, 0, 0);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string> 注册成功</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page3">
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="logInWrong">
+                  <property name="styleSheet">
+                   <string notr="true">#userNameWrong_1{
+	color: rgb(255, 0, 0);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>用户名或密码错误</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page4">
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="sizeWrong">
+                  <property name="styleSheet">
+                   <string notr="true">#userNameWrong_1{
+	color: rgb(255, 0, 0);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>用户名或密码长度不符合要求</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page5">
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="userNameWrong">
+                  <property name="styleSheet">
+                   <string notr="true">#userNameWrong_1{
+	color: rgb(255, 0, 0);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>该用户名已存在</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page6">
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="passwordWrong">
+                  <property name="styleSheet">
+                   <string notr="true">#userNameWrong_1{
+	color: rgb(255, 0, 0);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>两次输入密码不一致</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="QStackedWidget" name="stackedWidget_Error">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <widget class="QWidget" name="page"/>
-           <widget class="QWidget" name="page_2"/>
           </widget>
          </item>
         </layout>
